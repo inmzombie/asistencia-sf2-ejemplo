@@ -1,0 +1,10 @@
+ipap_ejemplo_asistencia:
+    resource: "@IpapEjemploAsistenciaBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ipap_calculator:
+    resource: "@IpapCalculatorBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
