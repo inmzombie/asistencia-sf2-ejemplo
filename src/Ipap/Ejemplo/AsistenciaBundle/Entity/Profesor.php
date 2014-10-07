@@ -5,11 +5,11 @@ namespace Ipap\Ejemplo\AsistenciaBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Alumno
+ * Profesor
  *
  * @ORM\Entity
  */
-class Alumno extends Persona
+class Profesor extends Persona
 {
     /**
      * @var integer
@@ -23,16 +23,10 @@ class Alumno extends Persona
     /**
      * @var string
      *
-     * @ORM\Column(name="codigo", type="string", length=255)
+     * @ORM\Column(name="especialidad", type="string", length=255)
      */
-    private $codigo;
+    private $especialidad;
 
-    /**
-     * @var integer
-     *
-     * @ORM\OneToMany(targetEntity="Inscripcion",mappedBy="alumno", cascade={"persist"})
-     */
-     private $inscripciones;
 
     /**
      * Get id
@@ -45,25 +39,25 @@ class Alumno extends Persona
     }
 
     /**
-     * Set codigo
+     * Set especialidad
      *
-     * @param string $codigo
-     * @return Alumno
+     * @param string $especialidad
+     * @return Profesor
      */
-    public function setCodigo($codigo)
+    public function setEspecialidad($especialidad)
     {
-        $this->codigo = $codigo;
-    
+        $this->especialidad = $especialidad;
+
         return $this;
     }
 
     /**
-     * Get codigo
+     * Get especialidad
      *
-     * @return string 
+     * @return string
      */
-    public function getCodigo()
+    public function getEspecialidad()
     {
-        return $this->codigo;
+        return $this->especialidad;
     }
 }
