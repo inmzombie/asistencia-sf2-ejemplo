@@ -48,7 +48,7 @@ class Persona
     /**
      * @var integer
      *
-     * @ORM\OneToMany(targetEntity="Telefono",mappedBy="persona", cascade={"all"})
+     * @ORM\OneToMany(targetEntity="Telefono",mappedBy="persona", cascade={"all"}, orphanRemoval=true)
      */
      private $telefonos;
 
@@ -154,6 +154,7 @@ class Persona
      */
     public function addTelefono(\Ipap\Ejemplo\AsistenciaBundle\Entity\Telefono $telefonos)
     {
+        $telefonos->setPersona($this);
         $this->telefonos[] = $telefonos;
 
         return $this;

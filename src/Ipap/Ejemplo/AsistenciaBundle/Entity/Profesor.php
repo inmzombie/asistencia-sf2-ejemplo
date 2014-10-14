@@ -11,14 +11,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Profesor extends Persona
 {
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
 
     /**
      * @var string
@@ -26,17 +18,6 @@ class Profesor extends Persona
      * @ORM\Column(name="especialidad", type="string", length=255)
      */
     private $especialidad;
-
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set especialidad

@@ -12,15 +12,6 @@ use Doctrine\ORM\Mapping as ORM;
 class Alumno extends Persona
 {
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="codigo", type="string", length=255)
@@ -32,16 +23,16 @@ class Alumno extends Persona
      *
      * @ORM\OneToMany(targetEntity="Inscripcion",mappedBy="alumno", cascade={"persist"})
      */
-     private $inscripciones;
+    private $inscripciones;
 
     /**
-     * Get id
+     * To String function
      *
-     * @return integer
+     * @return string
      */
-    public function getId()
+    public function __toString()
     {
-        return $this->id;
+        return (string)$this->getNombre() . ' ' . $this->getApellido();
     }
 
     /**

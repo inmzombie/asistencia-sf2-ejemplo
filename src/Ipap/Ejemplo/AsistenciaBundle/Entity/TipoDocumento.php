@@ -37,6 +37,16 @@ class TipoDocumento
 
 
     /**
+     * To String function
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string)$this->tipo;
+    }
+
+    /**
      * Get id
      *
      * @return integer

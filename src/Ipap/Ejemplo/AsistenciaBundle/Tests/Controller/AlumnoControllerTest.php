@@ -19,7 +19,7 @@ class AlumnoControllerTest extends WebTestCase
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'ipap_ejemplo_asistenciabundle_alumnotype[field_name]'  => 'Test',
+            'ipap_ejemplo_asistenciabundle_alumno[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class AlumnoControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Edit')->form(array(
-            'ipap_ejemplo_asistenciabundle_alumnotype[field_name]'  => 'Foo',
+            'ipap_ejemplo_asistenciabundle_alumno[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 

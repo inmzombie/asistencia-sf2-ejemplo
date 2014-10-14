@@ -31,7 +31,7 @@ class Inscripcion
     /**
      * @var integer
      *
-     * @ORM\ManyToOne(targetEntity="Inscripcion", inversedBy="inscripciones")
+     * @ORM\ManyToOne(targetEntity="Alumno", inversedBy="inscripciones")
      * @ORM\JoinColumn(name="alumno_id", referencedColumnName="id")
      */
     private $alumno;

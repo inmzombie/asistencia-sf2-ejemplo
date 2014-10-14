@@ -3,3 +3,10 @@ ipap_calculator:
     type:     annotation
     prefix:   /
 
+ipap_ejemplo_asistencia:
+    resource: "@IpapEjemploAsistenciaBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

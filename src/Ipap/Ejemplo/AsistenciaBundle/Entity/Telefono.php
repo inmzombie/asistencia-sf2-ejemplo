@@ -45,6 +45,16 @@ class Telefono
     private $persona;
 
     /**
+     * To String function
+     *
+     * @return string número
+     */
+    public function __toString()
+    {
+        return (string)$this->numero;
+    }
+
+    /**
      * Get id
      *
      * @return integer 

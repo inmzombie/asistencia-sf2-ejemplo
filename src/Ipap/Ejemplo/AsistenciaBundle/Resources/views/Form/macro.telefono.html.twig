@@ -1,0 +1,13 @@
+{% macro telefonos(form) %}
+    <div class="row-fluid">
+            <div class="span4">
+                {{ form_row(form.tipo) }}
+            </div>
+            <div class="span4">
+                {{ form_row(form.numero) }}
+            </div>
+            <div class="span2">
+                <a class='delete-form btn btn-mini btn-danger' href='#'><i class='icon-remove-circle'></i> </a>
+            </div>
+    </div>
+{% endmacro %}

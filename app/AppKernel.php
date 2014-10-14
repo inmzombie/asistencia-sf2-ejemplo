@@ -8,7 +8,6 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
-            /* Third party Bundle */
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -17,6 +16,11 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            /* Third party Bundle */
+            new FOS\UserBundle\FOSUserBundle(),
+            new MWSimple\Bundle\CrudGeneratorBundle\MWSimpleCrudGeneratorBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Lexik\Bundle\FormFilterBundle\LexikFormFilterBundle(),
             /* My Bundles */
             new Ipap\Bundle\CalculatorBundle\IpapCalculatorBundle(),
             new Ipap\Ejemplo\AsistenciaBundle\IpapEjemploAsistenciaBundle(),

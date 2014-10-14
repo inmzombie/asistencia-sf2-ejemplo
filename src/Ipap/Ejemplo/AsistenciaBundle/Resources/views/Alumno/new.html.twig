@@ -1,0 +1,25 @@
+{% extends 'MWSimpleCrudGeneratorBundle::layout.html.twig' %}
+
+{% block title %}
+{{ parent() }} - {{ 'views.new.creation'|trans({'%entity%': 'Alumno'}, 'MWSimpleCrudGeneratorBundle') }}
+{% endblock %}
+
+{% block page %}
+    <h1>{{ 'views.new.creation'|trans({'%entity%': 'Alumno'}, 'MWSimpleCrudGeneratorBundle') }}</h1>
+    {# Aplicando theming al formulario alumno #}
+    {% form_theme form 'IpapEjemploAsistenciaBundle:Form:alumno.theming.html.twig' %}
+    {{ form(form) }}
+
+        <div>
+    <div class="float-left">
+        <a class="btn" href="{{ path('alumno') }}">
+            {{ 'views.recordactions.backtothelist'|trans({}, 'MWSimpleCrudGeneratorBundle') }}
+        </a>
+    </div>
+</div>
+    {% block javascript %}
+        {% javascripts '@IpapEjemploAsistenciaBundle/Resources/public/js/*' %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+{% endblock %}
