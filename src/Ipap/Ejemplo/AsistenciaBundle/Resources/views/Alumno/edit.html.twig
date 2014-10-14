@@ -19,7 +19,10 @@
     <div class="float-left">{{ form(delete_form) }}</div>
 </div>
     {% block javascript %}
-        {% javascripts '@IpapEjemploAsistenciaBundle/Resources/public/js/*' %}
+        {% javascripts '@IpapEjemploAsistenciaBundle/Resources/public/js/addForm.js' 
+            '@IpapEjemploAsistenciaBundle/Resources/public/js/agregarTelefonos.js'
+            '@IpapEjemploAsistenciaBundle/Resources/public/js/deleteRow.js'
+        %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     {% endblock %}
